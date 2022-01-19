@@ -1,0 +1,125 @@
+<!--<div class="float-right" style="padding-right: 40px;padding-top: 20px;">-->
+<!-- <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+
+
+    <div class="btn-group" role="group">
+      <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Make this
+      </button>
+      <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+        <a class="dropdown-item" href="#">Profile Photo</a>
+        <a class="dropdown-item" href="#">Album cover</a>
+      </div>
+    </div>
+  </div> -->
+<!-- <a (click)= "makeCoverPhoto()" class="btn btn-primary">Make Album cover</a> -->
+<!--</div>
+<h2>Photo</h2>
+<div *ngIf="photo" style="width: 450px ;margin: auto;">
+
+    <img [src]="photo.photoUrl" class="rounded" width="450px" />
+
+
+</div>>
+
+<button type="button" class="btn btn-primary" (click)="makeCover()">Make Album cover</button>
+
+<h2>Photos is displayed here</h2>
+<div class="row">
+    <div class="col-sm-3" *ngFor="let album of albums">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" [src]="album.coverPhotoUrl" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{album.name}}</h5>
+                <a [routerLink]="['/photo',album.id]" class="btn btn-primary">Go to Photo</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<h3>Comments</h3>
+
+<div style="width:600px;margin:auto">
+    <div class="form-group">
+        <textarea class="form-control" rows="3" [(ngModel)]="newComment"></textarea>
+
+    </div>
+    <div class="float-right">
+
+        <button type="button" class="btn btn-primary" [disabled]="!newComment" (click)="saveComment()">Post comment</button>
+
+    </div>
+</div>
+<br />
+<br />
+<br />
+
+
+<div *ngIf="allComments">
+    <div class="alert alert-primary" role="alert" *ngFor="let comment of allComments">
+
+        {{comment.message}}--{{comment.createdBy}} 0n {{comment.dateCreated}}
+
+
+    </div>
+
+</div>
+
+<br>-->
+
+
+<!--<div class="float-right" style="padding-right: 40px;padding-top: 20px;">
+
+    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+
+        <div class="btn-group" role="group">
+            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Make this
+            </button>
+            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                <a class="dropdown-item">Profile Photo</a>
+                <a class="dropdown-item" href="#">Album Cover</a>
+            </div>
+        </div>
+    </div>
+
+</div>-->
+<br>
+
+<h2>Photo</h2>
+<div *ngIf="photos" style="width: 450px ;margin: auto;">
+    <div *ngFor="let photo of photos">
+
+        <img [src]="photo.photoUrl" class="rounded" style="width: 450px ;margin: auto;" />
+    </div>
+
+</div>
+
+<br />
+
+<h2>Comments</h2>
+
+<div style="width:600px;margin:auto">
+    <div class="form-group">
+        <textarea class="form-control" rows="3" [(ngModel)]="newComment"></textarea>
+
+    </div>
+    <div class="float-right">
+
+        <button type="button" class="btn btn-primary" [disabled]="!newComment" (click)="saveComment()">Post comment</button>
+
+    </div>
+</div>
+<br />
+<br />
+<br />
+<h3>Latest Comments</h3>
+<div *ngIf="allComments">
+    <div class="alert alert-primary" role="alert" *ngFor="let comment of allComments">
+
+         "{{comment.message}}" 
+
+    </div>
+
+</div>

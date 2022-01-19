@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\album-details",
+    "\\src\\app\\login",
+    "\\src\\app\\my-albums",
+    "\\src\\app\\photo-details",
+    "\\src\\app\\profile",
+    "\\src\\app\\recent-albums",
+    "\\src\\environments"
+  ],
+  "SelectedNode": "\\src\\app\\album.service.ts",
+  "PreviewInSolutionExplorer": false
+}
